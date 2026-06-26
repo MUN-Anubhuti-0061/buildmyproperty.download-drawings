@@ -1,0 +1,779 @@
+/* =========================
+   ROOT PAGE STYLING
+========================= */
+html,
+body,
+#download-drawings,
+#container-uiarea,
+#container-download-drawings---appView {
+    height: 100%;
+}
+
+.rakPage {
+    background-color: #f8f9fb;
+}
+
+/* =========================
+   RED HEADER STYLING
+========================= */
+.customRedPage .sapMPageHeader {
+    background-color: #C00000;
+}
+
+.customRedPage .sapMPageHeader .sapMTitle,
+.customRedPage .sapMPageHeader .sapMTitleStyleAuto,
+.customRedPage .sapMPageHeader .sapMLabel {
+    color: #ffffff;
+}
+
+/* =========================
+   SERVICE HEADER SECTION
+========================= */
+.serviceLabel {
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+    margin: 0 8px 4px 0 !important;
+    padding: 0 !important;
+}
+
+.caseIdText {
+    font-size: 0.9rem !important;
+    color: #666666 !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
+}
+
+/* =========================
+   COLUMN HEADER STYLING
+========================= */
+.rakTable .columnHeader {
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+.rakTable .sapMListTblHeaderRow {
+    border-bottom: 2px solid #c8202f !important;
+}
+
+.rakTable .sapMListTblHeaderCell {
+    padding: 12px 8px !important;
+}
+
+/* =========================
+   CHECKBOX STYLING - RED
+========================= */
+.rakTable .sapMCb .sapMCbBg {
+    border-radius: 4px;
+    border: 2px solid #c8202f !important;
+}
+
+.rakTable .sapMCbMarkChecked:before {
+    color: #ffffff !important;
+}
+
+.rakTable .sapMCbMarkChecked,
+.rakTable .sapMCb.sapMCbChecked .sapMCbBg {
+    background-color: #c8202f !important;
+    border-color: #c8202f !important;
+}
+
+.rakTable .sapMCb:focus .sapMCbBg,
+.rakTable .sapMCb.sapMCbFocused .sapMCbBg {
+    border: 2px solid #c8202f !important;
+    box-shadow: 0 0 0 2px rgba(200, 32, 47, 0.2) !important;
+    outline: none !important;
+}
+
+/* =========================
+   TABLE ROW SELECTION - RED BOUNDARY ONLY
+========================= */
+.rakTable .sapMLIBSelected {
+    background: transparent !important;
+    border-left: 3px solid #c8202f !important;
+    border-right: 3px solid #c8202f !important;
+    box-shadow: inset 0 1px 0 #c8202f, inset 0 -1px 0 #c8202f !important;
+}
+
+.rakTable .sapMLIB:hover {
+    background-color: #f8f8f8 !important;
+}
+
+.rakTable .sapMLIBActive,
+.rakTable .sapMLIB:active {
+    background: transparent !important;
+    border-left: 3px solid #c8202f !important;
+    border-right: 3px solid #c8202f !important;
+    box-shadow: inset 0 1px 0 #c8202f, inset 0 -1px 0 #c8202f !important;
+}
+
+.rakTable .sapMLIBFocusable:focus {
+    outline: none !important;
+    box-shadow: inset 0 0 0 2px #c8202f !important;
+}
+
+.rakTable .sapMLIBSelected.sapMLIBFocusable {
+    box-shadow: inset 0 1px 0 #c8202f, inset 0 -1px 0 #c8202f !important;
+}
+
+/* =========================
+   STATUS BADGE STYLING
+========================= */
+.rakTable .sapMObjectStatus {
+    display: inline-block;
+    padding: 4px 12px !important;
+    border-radius: 12px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500;
+}
+
+/* Success Status - Green (Approved) */
+.rakTable .sapMObjectStatusSuccess {
+    background-color: #e8f5e9 !important;
+    color: #2e7d32 !important;
+}
+
+.rakTable .sapMObjectStatusSuccess .sapMObjStatusText {
+    color: #2e7d32 !important;
+    font-weight: 500;
+}
+
+/* Warning Status - Yellow (Other Statuses) */
+.rakTable .sapMObjectStatusWarning {
+    background-color: #fff8e1 !important;
+    color: #f57f17 !important;
+}
+
+.rakTable .sapMObjectStatusWarning .sapMObjStatusText {
+    color: #f57f17 !important;
+    font-weight: 500;
+}
+
+/* Dialog with personalization styling */
+.personalizationDialog {
+    border-radius: 8px !important;
+    width: 100% !important;
+}
+
+.personalizationDialog.sapMDialog {
+    min-height: auto !important;
+}
+
+.personalizationDialog .sapMDialogSection {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.personalizationDialog.sapMDialog.sapMDialogResizable {
+    resize: both !important;
+}
+
+/* Dialog header */
+.personalizationDialog .sapMDialogHeader {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 16px !important;
+    cursor: move !important;
+}
+
+.personalizationDialog .sapMDialogTitle {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+/* Dialog content - Scrollable */
+.personalizationDialog .sapMDialogContent {
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+.personalizationDialog .sapMList {
+    border: none !important;
+    width: 100% !important;
+    overflow-y: auto !important;
+    flex: 1 1 auto !important;
+}
+
+/* Scrollbar styling */
+.personalizationDialog .sapMList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.personalizationDialog .sapMList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.personalizationDialog .sapMList::-webkit-scrollbar-thumb {
+    background: #c8202f;
+    border-radius: 4px;
+}
+
+.personalizationDialog .sapMList::-webkit-scrollbar-thumb:hover {
+    background: #a81826;
+}
+
+/* List items styling */
+.personalizationDialog .sapMListItem {
+    background-color: #ffffff !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    padding: 12px 16px !important;
+}
+
+.personalizationDialog .sapMListItem:last-child {
+    border-bottom: none !important;
+}
+
+/* Remove blue selection and replace with RAK red boundary */
+.personalizationDialog .sapMListItem.sapMLIBSelected,
+.personalizationDialog .sapMListItemBase.sapMLIBSelected {
+    background-color: #ffffff !important;
+    border: 2px solid #c8202f !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding: 10px 16px !important;
+}
+
+/* Override SAP UI5 selection highlight */
+.personalizationDialog .sapMLIB.sapMLIBSelected {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: 2px solid #c8202f !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.personalizationDialog .sapMListItem.sapMLIBHoveredAndSelected {
+    background: #ffffff !important;
+    border: 2px solid #c8202f !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* Hover state - no background change */
+.personalizationDialog .sapMListItemBase:hover {
+    background-color: #ffffff !important;
+}
+
+.personalizationDialog .sapMListItemBase.sapMLIBSelected:hover {
+    background-color: #ffffff !important;
+    border: 2px solid #c8202f !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* Remove SAP blue focus */
+.personalizationDialog .sapMLIB:focus,
+.personalizationDialog .sapMLIB.sapMLIBFocusable:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.personalizationDialog .sapMLIB.sapMLIBSelected:focus {
+    background: #ffffff !important;
+    border: 2px solid #c8202f !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+/* Checkbox in personalize dialog */
+.personalizationDialog .sapMCb .sapMCbBg {
+    border-radius: 4px;
+    border: 2px solid #c8202f !important;
+}
+
+.personalizationDialog .sapMCbMarkChecked:before {
+    color: #ffffff !important;
+}
+
+.personalizationDialog .sapMCbMarkChecked,
+.personalizationDialog .sapMCb.sapMCbChecked .sapMCbBg {
+    background-color: #c8202f !important;
+    border-color: #c8202f !important;
+}
+
+.personalizationDialog .sapMCb:focus .sapMCbBg,
+.personalizationDialog .sapMCb.sapMCbFocused .sapMCbBg {
+    border: 2px solid #c8202f !important;
+    box-shadow: 0 0 0 2px rgba(200, 32, 47, 0.2) !important;
+    outline: none !important;
+}
+
+/* Column label text */
+.personalizationDialog .sapMText {
+    font-size: 0.95rem !important;
+    color: #333333 !important;
+    font-weight: 400;
+}
+
+/* Dialog footer */
+.personalizationDialog .sapMDialogFooter {
+    background-color: #ffffff !important;
+    border-top: none !important;
+    padding: 12px 16px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* All buttons in dialog footer */
+.personalizationDialog .sapMDialogFooter .sapMBtn {
+    flex: 0 0 auto !important;
+    min-width: 120px !important;
+    position: relative !important;
+    z-index: 11 !important;
+}
+
+/* Apply button - RAK red filled */
+.personalizationDialog .rakBtn.sapMBtn .sapMBtnInner {
+    background: #c8202f !important;
+    border: 1px solid #c8202f !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8px 24px !important;
+}
+
+.personalizationDialog .rakBtn.sapMBtn:hover .sapMBtnInner {
+    background: #a81826 !important;
+    border-color: #a81826 !important;
+}
+
+.personalizationDialog .rakBtn.sapMBtn .sapMBtnContent {
+    color: #ffffff !important;
+}
+
+/* Close button - outline style */
+.personalizationDialog .sapMBtnEmphasized.sapMBtn .sapMBtnInner {
+    background: #ffffff !important;
+    border: 1px solid #c8202f !important;
+    color: #c8202f !important;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 8px 24px !important;
+}
+
+.personalizationDialog .sapMBtnEmphasized.sapMBtn:hover .sapMBtnInner {
+    background: #fdecec !important;
+    border-color: #c8202f !important;
+}
+
+.personalizationDialog .sapMBtnEmphasized.sapMBtn .sapMBtnContent {
+    color: #c8202f !important;
+}
+
+/* =========================
+   SEARCH FIELD STYLING
+========================= */
+.rakSearch {
+    width: 100%;
+    max-width: 20rem;
+}
+
+.rakSearch .sapMSFF {
+    border-radius: 24px;
+    border: 1px solid #d9d9d9 !important;
+    transition: border-color 0.2s ease;
+}
+
+.rakSearch .sapMSFF.sapMSFFFocus,
+.rakSearch .sapMSFF:focus-within {
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* =========================
+   TOOLBAR COUNTER STYLING
+========================= */
+.titleWithCounter {
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.totalCountText {
+    font-size: 0.875rem;
+    color: #666666 !important;
+    font-weight: 400;
+    margin-right: 4px !important;
+}
+
+.selectedCountText {
+    font-size: 0.875rem;
+    color: #666666 !important;
+    font-weight: 400;
+}
+
+/* =========================
+   PRIMARY BUTTON STYLING (Settings, Refresh)
+========================= */
+.rakPrimaryBtn .sapMBtnInner {
+    background: #c8202f !important;
+    border-color: #c8202f !important;
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.rakPrimaryBtn .sapMBtnInner:hover {
+    background: #a81a1f !important;
+    border-color: #a81a1f !important;
+}
+
+.rakPrimaryBtn .sapMBtnInner:focus {
+    background: #c8202f !important;
+    border-color: #c8202f !important;
+    box-shadow: 0 0 0 2px rgba(200, 32, 47, 0.2) !important;
+    outline: none !important;
+}
+
+.rakPrimaryBtn .sapUiIcon {
+    color: #ffffff !important;
+}
+
+/* =========================
+   ICON BUTTON STYLING (Settings, Refresh)
+========================= */
+.rakIconBtn .sapMBtnInner {
+    background: #f5f6f8 !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 20px !important;
+    
+}
+
+.rakIconBtn .sapUiIcon {
+    color: #c8202f !important;
+}
+
+.rakIconBtn:hover .sapMBtnInner,
+.rakIconBtn .sapMBtnInner:hover {
+    background: #fdecec !important;
+    border-color: #f5b5bb !important;
+}
+
+.rakIconBtn .sapMFocusable:focus,
+.rakIconBtn .sapMBtnInner:focus {
+    background: #fdecec !important;
+    border-color: #c8202f !important;
+    box-shadow: none !important;
+}
+
+.rakIconBtn .sapMBtnInner.sapMBtnActive {
+    background: #f9d7db !important;
+    border-color: #c8202f !important;
+}
+
+.rakIconBtn .sapMBtnInner::after {
+    display: none !important;
+}
+
+/* =========================
+   DOWNLOAD BUTTON STYLING
+========================= */
+.rakBtn.sapMBtn {
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.rakBtn.sapMBtn .sapMBtnInner {
+    font-size: 13px;
+    font-weight: 600;
+    height: 36px;
+    min-width: 120px;
+    padding: 0 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff !important;
+    border: 1px solid #c8202f !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease;
+}
+
+.rakBtn.sapMBtn .sapMBtnContent,
+.rakBtn.sapMBtn .sapMBtnIcon {
+    color: #c8202f !important;
+}
+
+.rakBtn.sapMBtn:hover .sapMBtnInner {
+    background: #fdecec !important;
+}
+
+.rakBtn.sapMBtn.sapMBtnFocused .sapMBtnInner,
+.rakBtn.sapMBtn .sapMFocusable:focus {
+    background: #c8202f !important;
+    border-color: #c8202f !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.rakBtn.sapMBtn.sapMBtnFocused .sapMBtnContent,
+.rakBtn.sapMBtn.sapMBtnFocused .sapMBtnIcon {
+    color: #ffffff !important;
+}
+
+.rakDownloadBtn:disabled,
+.rakDownloadBtn.sapMBtnDisabled {
+    opacity: 0.5 !important;
+}
+
+/* =========================
+   PERSONALIZE DIALOG
+========================= */
+
+.sapMDialog.personalizationDialog {
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.personalizationDialog {
+    max-width: 260px !important;
+}
+
+.personalizationDialog .sapMDialogHeader {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.personalizationDialog .sapMDialogTitle {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+.personalizationDialog .sapMDialogContent {
+    padding: 0 !important;
+    background: #ffffff !important;
+}
+
+.personalizationDialog .sapMDialogSection {
+    max-height: 220px !important;
+    overflow-y: auto !important;
+    box-shadow: none !important;
+}
+
+/* List Items */
+.personalizationDialog .sapMLIB {
+    min-height: 2rem !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.personalizationDialog .sapMListItem {
+    padding: 0.4rem 0.75rem !important;
+}
+
+.personalizationDialog .sapMListItem:last-child {
+    border-bottom: none !important;
+}
+
+.personalizationDialog .sapMListItemBase .sapMListItemContent {
+    padding: 0 !important;
+}
+
+/* Checkbox */
+.personalizationDialog .sapMCb .sapMCbBg {
+    border: 2px solid #c8202f !important;
+    border-radius: 4px;
+}
+
+.personalizationDialog .sapMCb.sapMCbChecked .sapMCbBg,
+.personalizationDialog .sapMCbMarkChecked {
+    background: #c8202f !important;
+    border-color: #c8202f !important;
+}
+
+.personalizationDialog .sapMCbMarkChecked:before {
+    color: #ffffff !important;
+}
+
+.personalizationDialog .sapMCb:focus .sapMCbBg,
+.personalizationDialog .sapMCb.sapMCbFocused .sapMCbBg {
+    border-color: #c8202f !important;
+    box-shadow: 0 0 0 1px rgba(200, 32, 47, 0.2) !important;
+    outline: none !important;
+}
+
+/* Footer */
+.personalizationDialog .sapMDialogFooter,
+.personalizationDialog .sapMDialogFooter .sapMBar {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border-top: 1px solid #e0e0e0 !important;
+    padding: 0.25rem 0.5rem !important;
+}
+
+/* Buttons */
+.personalizationDialog .sapMBtn {
+    margin: 0 6px !important;
+}
+
+.personalizationDialog .sapMBtn .sapMBtnInner {
+    min-width: 70px !important;
+    height: 2rem !important;
+    padding: 0 0.75rem !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    border-radius: 20px !important;
+}
+
+/* Apply */
+.personalizationDialog .sapMBtnDefault .sapMBtnInner {
+    background: #c8202f !important;
+    border: 1px solid #c8202f !important;
+    color: #ffffff !important;
+}
+
+.personalizationDialog .sapMBtnDefault:hover .sapMBtnInner {
+    background: #a81826 !important;
+    border-color: #a81826 !important;
+}
+
+/* Close */
+.personalizationDialog .sapMBtnEmphasized .sapMBtnInner {
+    background: #ffffff !important;
+    border: 1px solid #c8202f !important;
+    color: #c8202f !important;
+}
+
+.personalizationDialog .sapMBtnEmphasized:hover .sapMBtnInner {
+    background: #fdecec !important;
+}
+
+/* =========================
+   CLOSE BUTTON STYLING
+========================= */
+.closeIconBtn.sapMBtn .sapMBtnInner {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.closeIconBtn .sapMBtnIcon,
+.closeIconBtn .sapUiIcon {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+}
+
+.closeIconBtn:hover .sapMBtnInner {
+    background-color: #c8202f !important;
+    border-radius: 50% !important;
+}
+
+.closeIconBtn:hover .sapMBtnIcon,
+.closeIconBtn:hover .sapUiIcon {
+    color: #ffffff !important;
+}
+
+.closeIconBtn .sapMBtnInner.sapMBtnActive {
+    background-color: #a81826 !important;
+}
+
+.closeIconBtn.sapMBtnFocused .sapMBtnInner {
+    box-shadow: 0 0 0 2px rgba(200, 32, 47, 0.4) !important;
+    border-radius: 50% !important;
+}
+
+/* =========================
+   RAK MESSAGEBOX FULL RESET
+   (removes SAP BLUE COMPLETELY)
+========================= */
+/* Dialog container */
+.rakMessageBox.sapMDialog {
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+/* removes the BLUE INFO LINE */
+.rakMessageBox .sapMDialogTitle,
+.rakMessageBox .sapMBar,
+.rakMessageBox .sapMDialogHeader {
+    background: #ffffff !important;
+    border-bottom: 2px solid #c8202f !important;
+    box-shadow: none !important;
+}
+
+/* SAP INFORMATION BLUE STRIP REMOVAL */
+.rakMessageBox.sapMMessageBoxInformation,
+.rakMessageBox .sapMMessageBoxInformation {
+    background: #ffffff !important;
+}
+
+/* Icon (blue → RAK ) */
+.rakMessageBox .sapUiIcon {
+    color: #c8202f !important;
+}
+
+/* Message text */
+.rakMessageBox .sapMText {
+    color: #333333 !important;
+}
+
+/* ================= BUTTONS ================= */
+
+/* base button */
+.rakMessageBox .sapMBtn .sapMBtnInner {
+    background: #ffffff !important;
+    border: 1px solid #c8202f !important;
+    color: #c8202f !important;
+    border-radius: 20px !important;
+}
+
+/* PRIMARY button (OK) */
+.rakMessageBox .sapMBtnAccept .sapMBtnInner,
+.rakMessageBox .sapMBtnEmphasized .sapMBtnInner {
+    background: #c8202f !important;
+    color: #ffffff !important;
+    border: 1px solid #c8202f !important;
+}
+
+/* ================= HOVER================= */
+
+/* transparent → red hover (RAK style) */
+.rakMessageBox .sapMBtn:hover .sapMBtnInner {
+    background: transparent !important;
+    color: #c8202f !important;
+    border: 1px solid #c8202f !important;
+}
+
+/* hover for primary button */
+.rakMessageBox .sapMBtnAccept:hover .sapMBtnInner,
+.rakMessageBox .sapMBtnEmphasized:hover .sapMBtnInner {
+    background: #a81826 !important;
+    color: #ffffff !important;
+}
+
+/* ================= REMOVE BLUE FOCUS ================= */
+
+.rakMessageBox *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* replace focus with red border */
+.rakMessageBox .sapMBtn:focus .sapMBtnInner {
+    box-shadow: inset 0 0 0 1px #c8202f !important;
+}
+
+/* remove SAP focus ring completely */
+.rakMessageBox .sapMBtn:focus .sapMBtnInner,
+.rakMessageBox .sapMFocusable:focus {
+    outline: none !important;
+}
+
+.sapMMessageToast {
+    background: #c8202f !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+}
+

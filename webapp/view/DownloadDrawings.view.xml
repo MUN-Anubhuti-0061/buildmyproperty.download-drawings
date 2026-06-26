@@ -1,0 +1,107 @@
+<mvc:View controllerName="buildmyproperty.download-drawings.controller.DownloadDrawings" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	displayBlock="true">
+	<App>
+		<Page class="customRedPage">
+			<customHeader>
+				<OverflowToolbar>
+					<Title text="{i18n>pageTitle}" level="H5"/>
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://decline" type="Transparent" tooltip="Close" press=".onCloseView" class="closeIconBtn"/>
+				</OverflowToolbar>
+			</customHeader>
+			<content>
+				<VBox class="sapUiResponsiveMargin">
+					<!-- Service Header -->
+					<VBox class="sapUiSmallMargin">
+						<HBox wrap="Wrap">
+							<Title text="{i18n>serviceLabel}" level="H5" class="serviceLabel"/>
+							<Text text="{viewModel>/caseId}" class="caseIdText"/>
+						</HBox>
+					</VBox>
+					<!-- Toolbar -->
+					<OverflowToolbar design="Transparent" class="responsiveToolbar">
+						<!-- Record Counter -->
+						<VBox class="titleWithCounter">
+							<HBox class="counterText" wrap="Wrap">
+								<Text text="{= ${i18n>pageTitle} + ' ' + ${viewModel>/totalCount} }" class="totalCountText"/>
+								<Text text="{= ' | ' + ${i18n>selectedText} + ' [' + ${viewModel>/selectedCount} + ']' }" class="selectedCountText"
+									visible="{= ${viewModel>/selectedCount} > 0 }"/>
+							</HBox>
+						</VBox>
+						<ToolbarSpacer/>
+						<!-- Search -->
+						<SearchField id="searchfield" placeholder="{i18n>searchPlaceholder}" liveChange=".onSearch" class="rakSearch" ariaLabelledBy="tableTitle">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low" shrinkable="true"/>
+							</layoutData>
+						</SearchField>
+						<!-- Personalize -->
+						<OverflowToolbarButton id="btnPersonalize" icon="sap-icon://action-settings" type="Emphasized" tooltip="{i18n>tooltipPersonalize}"
+							press=".onPersonalize" class="rakPrimaryBtn rakIconBtn" ariaLabelledBy="tableTitle">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</OverflowToolbarButton>
+						<!-- Refresh -->
+						<OverflowToolbarButton id="btnrefresh" icon="sap-icon://refresh" type="Emphasized" tooltip="{i18n>tooltipRefresh}" press=".onRefresh"
+							class="rakPrimaryBtn rakIconBtn" ariaLabelledBy="tableTitle">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="Low"/>
+							</layoutData>
+						</OverflowToolbarButton>
+						<!-- Download -->
+						<Button id="btndownload" text="{i18n>downloadBtn}" type="Emphasized" tooltip="{i18n>downloadBtn}" press=".onDownload"
+							class="rakBtn rakDownloadBtn" ariaLabelledBy="tableTitle">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="High"/>
+							</layoutData>
+						</Button>
+					</OverflowToolbar>
+					<!-- Table -->
+					<Table id="table" mode="MultiSelect" growing="true" growingThreshold="20" growingScrollToLoad="true" selectionChange=".onSelectionChange"
+						sticky="ColumnHeaders" items="{attachModel>/results}" busyIndicatorDelay="0" noDataText="{i18n>noDataText}" includeItemInSelection="true"
+						class="rakTable" ariaLabelledBy="tableTitle">
+						<columns>
+							<!-- File Name -->
+							<Column>
+								<Label text="{i18n>fileName}" class="columnHeader"/>
+							</Column>
+							<!-- Building -->
+							<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Block">
+								<Label text="{i18n>building}" class="columnHeader"/>
+							</Column>
+							<!-- Drawing Type -->
+							<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Block">
+								<Label text="{i18n>drawingType}" class="columnHeader"/>
+							</Column>
+							<!-- Sheet Number -->
+							<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Block">
+								<Label text="{i18n>sheetNumber}" class="columnHeader"/>
+							</Column>
+							<!-- Hidden Status -->
+							<Column visible="false">
+								<Label text="{i18n>status}" class="columnHeader"/>
+							</Column>
+							<!-- Status Text -->
+							<Column demandPopin="true" minScreenWidth="Tablet" popinDisplay="Block">
+								<Label text="{i18n>statusText}" class="columnHeader"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{attachModel>FileName}" wrapping="true"/>
+									<Text text="{attachModel>Building}"/>
+									<Text text="{attachModel>DrawingType}"/>
+									<Text text="{attachModel>SheetNo}"/>
+									<Text text="{attachModel>Status}"/>
+									<ObjectStatus text="{attachModel>StatusText}" state="{= ${attachModel>StatusText} === 'Approved' ? 'Success' : 'Warning' }"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</VBox>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

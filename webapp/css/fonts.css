@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Alexandria';
+    src: url('../assets/fonts/Alexandria-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Alexandria-Regular.woff') format('woff');
+    font-display: swap; 
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Poppins-Regular.woff') format('woff');
+    font-display: swap;
+}

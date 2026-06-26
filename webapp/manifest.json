@@ -1,0 +1,121 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "buildmyproperty.download-drawings",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"ZMUN_ATTACHMENT_SRV": {
+				"uri": "/sap/opu/odata/sap/ZMUN_ATTACHMENT_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml",
+					"useBatch": false
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "buildmyproperty.download-drawings.view.DownloadDrawings",
+			"type": "XML",
+			"async": true,
+			"id": "DownloadDrawings"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.comp": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "buildmyproperty.download-drawings.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"dataSource": "ZMUN_ATTACHMENT_SRV",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request",
+					"useBatch": true
+				},
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/fonts.css"
+				},
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "buildmyproperty.download-drawings.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "DownloadDrawings",
+					"target": "DownloadDrawings"
+				}
+			],
+			"targets": {
+				"DownloadDrawings": {
+					"viewName": "",
+					"viewId": ""
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
